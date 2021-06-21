@@ -1,0 +1,25 @@
+{% extends 'wrapper.html' %}
+{% block title %}
+Edit note
+{% endblock %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+		<div class="edit-form">
+			{{form.media}}
+			{{form.as_p}}
+			<button type="submit"> save changes</button>
+		</div>
+		<style type="text/css">
+			.edit-form{
+				margin: 80px;
+				border: 10px;
+			}
+			body{
+				background-image:linear-gradient (35deg, #0473b9 17%, #0094a7 67%);
+			}
+		
+		</style>
+</form>
+{% endblock content %}
+	

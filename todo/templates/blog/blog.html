@@ -1,0 +1,33 @@
+{% extends 'blog/wrapper_blog.html' %}
+  {% block content %}
+  <div class="title-blog">
+  	<h1 align="center">Blog for you</h1>
+  </div>
+  	{% for post in posts %}
+  		<div class="post-area">
+  			<h1><b>{{post.title_post}}</b></h1>
+  			<h3>{{post.post|safe}}</h3>
+  			<p>{{post.photo}}</p>
+  			<img src="/blog/d8a76b6d5682c8f86a8cfe6d59bcb268.jpg" alt=""/>
+  			<p>{{post.time_creation}}</p>
+  		</div>
+  		<style type="text/css">
+  		
+  			.post-area{
+  				margin: 50px;
+  				border: 4px;
+  				padding:150px;
+  				background: #ffff;
+  			}
+  		
+  			.title-blog{
+  				padding-left:100px;
+  				padding-right:100px;
+  				padding-bottom:20px;
+  				padding-top:20px;
+  				margin:50px;
+  				background: #f8fea8ff;
+  			}
+  		</style>
+  	{% endfor %}
+  {% endblock %}

@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(#00FFF4, #00FF90, #A2FF00, #FFFF5F);
+  background-repeat:no-repeat;
+  }
+}
+
+.block1{
+	background: gray;
+	margin: 150px;	
+	width: 200 px;
+	height: 20 px;
+}
+
+.container_case{
+	margin: 100px;
+	width: 100;
+}

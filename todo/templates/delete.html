@@ -1,0 +1,12 @@
+{% extends 'wrapper.html' %}
+{% block title %}
+<h3>Delete note</h3>
+{% endblock %}
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	<h4>Do you wanna delete <h3><b><i>{{note}}</i></b></h3>?</h4>
+	<button type="submit"> delete </button>
+</form>
+{% endblock %}
+	

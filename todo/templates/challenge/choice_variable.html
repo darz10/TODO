@@ -1,0 +1,32 @@
+{% extends 'challenge/challenge_wrapper.html' %}
+{% block title %} Choice variant challenge{% endblock %}
+{% block content %}
+	<a href="profile/" >Fill interests in your profile</a></br>
+	
+	<form method="POST">
+	    {% csrf_token %}
+	    <div class="create-form">
+	        <h4>Create your challenge</h4>
+	        {{form.as_p}}
+	        <button type="submit">Save</button>
+	    </div>
+	    <div class="vl"></div>
+	    
+	</form>
+	<style type="text/css">
+        .vl {
+            border-left: 9px solid black;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            margin-left: -3px;
+            top: 15px;
+            bottom: 15px;
+        }
+        .create-form{
+            align-content: center;
+            
+        }
+        }
+	</style>
+{% endblock %}

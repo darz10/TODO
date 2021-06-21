@@ -1,0 +1,11 @@
+{% extends 'challenge/challenge_wrapper.html' %}
+{% block title %}
+	Intro challenge
+{% endblock %}
+{% block content %}
+	<form method="POST">
+		{% csrf_token %}
+		<h1>Why do you need use it?</h1>
+		<p> Its very useful way achieve your goals</p>
+		<button type="submit"> Try it!</button>
+{% endblock %}

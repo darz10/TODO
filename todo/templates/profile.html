@@ -1,0 +1,27 @@
+{% extends 'wrapper.html' %}
+{% block content %}
+	<div class="profile-details">
+		<h3>Username: {{profile_data.username}}</h3>
+		<h3>Email: {{profile_data.email}}</h3>
+		<h3>First name: {{profile_data.first_name}}</h3>
+		<h3>Last name: {{profile_data.last_name}}</h3>
+		<h3>Gender: {{profile_data.gender}}</h3>
+		{{profile_data.avatar}}
+		<h3>Age: {{profile_data.age}}</h3>
+		<h3>Nuber phone: {{profile_data.phone_number}}</h3>
+		<h3>Interests: {{profile_data.interests}}</h3>
+		{{profile_data.avatar}}
+		
+	</div>
+	<style>
+	    .profile-details{
+	        margin: 120px;
+  			border: 4px;
+  			padding:130px;
+  			background: #ffff;
+  			
+  			
+	    }
+	    
+	</style>
+{% endblock %}

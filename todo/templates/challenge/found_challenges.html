@@ -1,0 +1,31 @@
+{% extends 'challenge/challenge_wrapper.html' %}
+{% block title %}
+	 Found challenges
+{% endblock %}
+{% block content %}
+	<h1 align="center" >Found challenges</h1>
+	<h3>Список предложенных заданий по вашим иньересам</h3>
+	{% for challenge in challenges %}
+		<div class="challenge-box">
+			<h2>Name of Challenge: <b>{{challenge.challenge_name}}</b></h2>
+			<h4>Describe: <b>{{challenge.describe}}</b></h4>
+			<h4>Goal: <b>{{challenge.goal}}</b></h4>
+			<div class="button-start">
+			    <a href=""><button type="submit">Start</button></a>
+			</div>
+		</div>
+		<style type="text/css">
+			
+			.challenge-box{
+				margin: 50px;
+				border: 4px;
+				padding:70px;
+				background: #ffff;
+			}
+			.button-start{
+			    justify-content: center;
+			}
+
+		</style>
+	{% endfor %}
+{% endblock %}

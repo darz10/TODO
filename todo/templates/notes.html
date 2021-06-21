@@ -1,0 +1,50 @@
+{% extends 'wrapper.html' %}
+{% block content %}
+	<ul class="nav justify-content-center">
+		<li class="nav-item">
+			<a class="nav-link" href="{% url 'create' %}">
+			<button type="button" class="btn btn-outline-primary btn-lg">Add new note</button></a>
+		</li>
+	</ul>
+	<style type="text/css">
+		.opt-site {
+			border: 40px;
+			width: 100%;
+			
+		}
+		.progress{
+			margin-left:250px;
+			margin-right:250px;
+		
+		}
+		
+		.note1{
+			margin-left:200px;
+			margin-right:200px;
+		}
+	</style>
+	<p align="center" >Total percentage of completed tasks</p>
+    <div class="progress">
+    	<div class="progress-bar" role="progressbar" style="width: {{percents}}%;" aria-valuenow="{{percents}}" aria-valuemin="0" aria-valuemax="100">{{percents}}%</div>
+    </div>
+    <br>
+    {% for note in notes %}
+  		<div class="note1" align="center" style="">
+  		<div class="card text-center">
+  		<div class="card-header"> Category: 
+  	<b>{{note.category}}</b>
+  	</div>
+  	<div class="card-body">
+  		<h5 class="card-title">{{note.title}}</h5>
+  		<p class="card-text">{{note.content|safe}}</p>
+  		<a href="{% url 'edit' note.id %}" ><button type="button" class="btn btn-success">Edit</button></a>
+  		<a href="{% url 'delete' pk=note.pk %}" ><button type="button" class="btn btn-danger">Delete</button></a>
+  	</div>
+  	<div class="card-footer text-muted">
+  		{{note.time_add}}
+  	</div>
+  	</div>
+  </div>
+  <br/>
+  {% endfor %}
+{% endblock%}

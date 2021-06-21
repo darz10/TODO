@@ -1,0 +1,2 @@
+# TODO_life
+This app is designed to improve your life.  With the application, you can create notes by category, create or use challenges to test yourself, as well as find useful articles in the blog of this application.

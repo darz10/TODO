@@ -1,0 +1,24 @@
+{% extends 'wrapper_log.html' %}
+{% load socialaccount %}
+
+{% block title}
+	<h1>Login page</h1>
+{% endblock}
+{% block content %}
+	<form method="POST">
+	{% csrf_token %}
+		<div class="login_form" align="center">
+			<input type="text" placeholder="Username" name="username"></p>
+			<input type="password" placeholder="Password" name="password" ></p>
+			<button type="submit">Login</button><br/>
+			<a href="{% provider_login_url "google" process="connect" %}">google</a>
+		</div>
+		<style type="text/css">
+		.login_form{
+			margin:250px;
+			padding:50px;
+			background:#aed4ffff;
+		}
+		</style>
+{% endblock %}
+		
